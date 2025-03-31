@@ -13,7 +13,9 @@
 </head>
 <body>
     <h1>Water Quality Prediction</h1>
-    <form action="/predict" method="post">
+    
+    <!-- Backend Connected -->
+    <form action="https://water-quality-prediction-1-8dip.onrender.com/predict" method="post">
         <input type="text" name="ph" placeholder="pH Level" required><br>
         <input type="text" name="hardness" placeholder="Hardness" required><br>
         <input type="text" name="solids" placeholder="Solids" required><br>
@@ -26,8 +28,5 @@
         <button type="submit">Predict</button>
     </form>
 
-    {% if prediction_text %}
-    <h2>{{ prediction_text }}</h2>
-    {% endif %}
 </body>
 </html>
